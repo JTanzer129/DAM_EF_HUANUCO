@@ -21,7 +21,7 @@ public class NotaFragment extends Fragment {
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
     // TODO: Customize parameters
-    private int mColumnCount = 1;
+    private int mColumnCount = 2;
     private NotasInteractionListener mListener;
     private List<Nota> notaList;
     private MyNotaRecyclerViewAdapter adapterNotas;
@@ -61,7 +61,7 @@ public class NotaFragment extends Fragment {
         if (view instanceof RecyclerView) {
             Context context = view.getContext();
             RecyclerView recyclerView = (RecyclerView) view;
-            if (mColumnCount <= 2) {
+            if (mColumnCount <= 1) {
                 recyclerView.setLayoutManager(new LinearLayoutManager(context));
             } else {
                 DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
